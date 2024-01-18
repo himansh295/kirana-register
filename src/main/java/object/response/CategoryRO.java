@@ -1,4 +1,4 @@
-package object;
+package object.response;
 
 import entity.Product;
 import enums.Status;

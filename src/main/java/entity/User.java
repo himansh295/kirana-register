@@ -42,5 +42,8 @@ public class User implements Serializable {
     private Store store;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    List<Transaction> transactions;
+    private List<Transaction> transactions;
+
+    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
+    private List<StoreUserMapping> storeUserMappings;
 }

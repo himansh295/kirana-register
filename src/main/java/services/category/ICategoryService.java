@@ -1,7 +1,7 @@
 package services.category;
 
 import exception.ValidationException;
-import object.CategoryRO;
+import object.response.CategoryRO;
 
 import java.util.List;
 

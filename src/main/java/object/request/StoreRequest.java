@@ -7,6 +7,6 @@ public class StoreRequest {
     private Long id;
     private String location;
     private String name;
-    private String ownerId;
+    private Long ownerId;
     private String ownerName;
 }

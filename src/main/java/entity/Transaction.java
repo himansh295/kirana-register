@@ -1,6 +1,9 @@
 package entity;
 
+import enums.Role;
 import enums.Status;
+import enums.TransactionStatus;
+import enums.TransactionType;
 import io.micrometer.core.annotation.Counted;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -33,10 +36,18 @@ public class Transaction implements Serializable
     private Long productId;
 
     @Column(name = "user_id")
-    private Long user_id;
+    private Long userId;
+
+    @Column(name = "amount")
+    private Double amount;
+
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "transaction_type")
+    private TransactionType transactionType;
 
     @Column(name = "status")
-    private Status status;
+    private TransactionStatus status;
 
     @Column(name = "created_at")
     @CreatedDate

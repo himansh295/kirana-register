@@ -4,7 +4,7 @@ import dao.ICategoryRepository;
 import entity.Category;
 import exception.ValidationException;
 import lombok.extern.slf4j.Slf4j;
-import object.CategoryRO;
+import object.response.CategoryRO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import services.category.ICategoryService;
