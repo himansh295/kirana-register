@@ -22,11 +22,13 @@ public class UserController {
 
     @PostMapping("/addNewUser")
     public ResponseEntity<ControllerBaseResponse> addNewUser(@RequestBody UserRequest userRequest) throws ValidationException {
+        log.info("Api: /v1/user/addNewUser , newUserRequest : {}",userRequest);
         return ResponseEntity.ok(ControllerResponseUtil.getSuccessResponse(userService.addNewUser(userRequest)));
     }
 
     @GetMapping("/getUserById/{userId}")
     public ResponseEntity<ControllerBaseResponse> getUserById(@PathVariable Long userId) throws Exception {
+        log.info("Api: /v1/user/getUserById/ , userId : {}",userId);
         return ResponseEntity.ok(ControllerResponseUtil.getSuccessResponse(userService.getUserById(userId)));
     }
 }
